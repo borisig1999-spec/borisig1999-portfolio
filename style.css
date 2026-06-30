@@ -300,14 +300,14 @@ body {
 
 .moon {
   position: absolute;
-  bottom: -45px;
+  bottom: -140px;
   left: 50%;
   transform: translateX(-50%);
-  width: 200px;
-  height: 200px;
-  background: #f0e68c;
+  width: 400px;
+  height: 400px;
+  background: #ffffff;
   border-radius: 50%;
-  box-shadow: 0 0 20px rgba(240,230,140,0.4), 0 0 60px rgba(240,230,140,0.15);
+  box-shadow: 0 0 30px rgba(255,255,255,0.25), 0 0 80px rgba(255,255,255,0.1);
   animation: rotateMoon 60s linear infinite;
   z-index: 1;
 }
