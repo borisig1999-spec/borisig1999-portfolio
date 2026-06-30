@@ -220,7 +220,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 40px 20px 80px;
+  padding: 40px 20px 40px;
 }
 
 .stars {
@@ -256,7 +256,7 @@ body {
 
 .tv-label {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   font-size: 1.6rem;
   font-weight: 700;
   color: #fff;
@@ -266,7 +266,7 @@ body {
 
 .tv-countdown {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   font-size: 1.1rem;
   color: #ccc;
   text-align: center;
@@ -300,7 +300,7 @@ body {
 
 .moon {
   position: absolute;
-  bottom: -320px;
+  bottom: -500px;
   left: 50%;
   transform: translateX(-50%);
   width: 600px;
@@ -330,24 +330,24 @@ body {
 
 .tv-antenna {
   position: absolute;
-  top: -38px;
+  top: -36px;
   left: 0;
   right: 0;
-  height: 42px;
-  z-index: 1;
+  height: 40px;
+  z-index: 0;
 }
 
 .antenna-rod {
   position: absolute;
   width: 2px;
-  height: 36px;
+  height: 34px;
   background: #999;
   bottom: 0;
   transform-origin: bottom center;
 }
 
-.antenna-rod.left { left: calc(50% - 40px); transform: rotate(-20deg); }
-.antenna-rod.right { left: calc(50% + 38px); transform: rotate(20deg); }
+.antenna-rod.left { left: calc(50% - 30px); transform: rotate(-25deg); }
+.antenna-rod.right { left: calc(50% + 28px); transform: rotate(25deg); }
 
 .tv-legs {
   display: flex;
@@ -355,14 +355,14 @@ body {
   gap: 160px;
   position: relative;
   height: 20px;
-  margin-top: -1px;
+  margin-top: 0;
 }
 
 .tv-leg {
   width: 22px;
-  height: 20px;
+  height: 18px;
   background: #5a4a3a;
-  clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
 }
 
 /* Footer */
