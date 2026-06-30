@@ -297,12 +297,67 @@ body {
   transform: scaleX(-1);
 }
 
-.tv-stand {
-  width: 80px;
+.moon {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #f0e68c;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(240,230,140,0.4), 0 0 60px rgba(240,230,140,0.15);
+  animation: rotateMoon 60s linear infinite;
+  z-index: 1;
+}
+
+@keyframes rotateMoon {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.tv-antenna {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
+  height: 30px;
+}
+
+.antenna-rod {
+  width: 3px;
+  height: 22px;
+  background: #666;
+  position: absolute;
+  bottom: 0;
+}
+
+.antenna-rod.left { left: calc(50% - 43px); transform: rotate(-20deg); }
+.antenna-rod.right { left: calc(50% + 40px); transform: rotate(20deg); }
+
+.antenna-ball {
+  width: 8px;
   height: 8px;
-  background: #3a3a3a;
-  margin: 0 auto;
-  border-radius: 0 0 4px 4px;
+  background: #888;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+}
+
+.antenna-ball.left { left: calc(50% - 50px); }
+.antenna-ball.right { left: calc(50% + 42px); }
+
+.tv-legs {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding-top: 2px;
+}
+
+.tv-leg {
+  width: 8px;
+  height: 20px;
+  background: #444;
+  border-radius: 0 0 3px 3px;
 }
 
 /* Footer */
