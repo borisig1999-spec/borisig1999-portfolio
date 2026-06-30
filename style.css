@@ -300,24 +300,24 @@ body {
 
 .moon {
   position: absolute;
-  bottom: -210px;
+  bottom: -320px;
   left: 50%;
   transform: translateX(-50%);
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   border-radius: 50%;
   background:
-    radial-gradient(circle at 30% 35%, #c8c8c8 0%, transparent 8%),
-    radial-gradient(circle at 65% 30%, #d0d0d0 0%, transparent 5%),
-    radial-gradient(circle at 50% 55%, #c0c0c0 0%, transparent 12%),
-    radial-gradient(circle at 25% 65%, #d5d5d5 0%, transparent 6%),
-    radial-gradient(circle at 70% 60%, #c8c8c8 0%, transparent 9%),
-    radial-gradient(circle at 40% 80%, #d0d0d0 0%, transparent 4%),
-    radial-gradient(circle at 80% 40%, #c5c5c5 0%, transparent 7%),
-    radial-gradient(circle at 15% 45%, #d3d3d3 0%, transparent 5%),
-    radial-gradient(circle at 55% 25%, #cbcbcb 0%, transparent 6%),
-    radial-gradient(circle at 75% 75%, #d0d0d0 0%, transparent 4%),
-    radial-gradient(circle at 35% 50%, #ffffff 0%, #f5f5f5 100%);
+    radial-gradient(circle at 30% 35%, #d0d0d0 0%, transparent 6%),
+    radial-gradient(circle at 65% 30%, #d8d8d8 0%, transparent 4%),
+    radial-gradient(circle at 50% 55%, #c8c8c8 0%, transparent 10%),
+    radial-gradient(circle at 25% 65%, #ddd 0%, transparent 5%),
+    radial-gradient(circle at 70% 60%, #d0d0d0 0%, transparent 7%),
+    radial-gradient(circle at 40% 80%, #d8d8d8 0%, transparent 3%),
+    radial-gradient(circle at 80% 40%, #ccc 0%, transparent 6%),
+    radial-gradient(circle at 15% 45%, #d5d5d5 0%, transparent 4%),
+    radial-gradient(circle at 55% 25%, #d0d0d0 0%, transparent 5%),
+    radial-gradient(circle at 75% 75%, #d8d8d8 0%, transparent 3%),
+    radial-gradient(circle at 45% 45%, #ffffff 0%, #f8f8f8 100%);
   box-shadow: 0 0 40px rgba(255,255,255,0.2), 0 0 100px rgba(255,255,255,0.08);
   animation: rotateMoon 180s linear infinite;
   z-index: 1;
@@ -354,14 +354,15 @@ body {
   justify-content: center;
   gap: 160px;
   position: relative;
-  height: 18px;
+  height: 20px;
+  margin-top: -1px;
 }
 
 .tv-leg {
-  width: 20px;
-  height: 18px;
-  background: #555;
-  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  width: 22px;
+  height: 20px;
+  background: #5a4a3a;
+  clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
 }
 
 /* Footer */
