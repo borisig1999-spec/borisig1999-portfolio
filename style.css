@@ -202,10 +202,11 @@ body {
 .tv-frame {
   max-width: 520px;
   margin: 0 auto;
-  background: #2a2a2a;
+  background: #3a3a3a;
   border-radius: 20px;
   padding: 14px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  border: 2px solid #555;
 }
 
 .tv-screen {
@@ -294,77 +295,6 @@ body {
 
 .party-icon.left {
   transform: scaleX(-1);
-}
-
-/* Luntik */
-.luntik {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-}
-
-.luntik-head {
-  width: 70px;
-  height: 60px;
-  background: #d88bdb;
-  border-radius: 50% 50% 45% 45%;
-  position: relative;
-  margin: 0 auto;
-  z-index: 2;
-}
-
-.luntik-eye {
-  position: absolute;
-  width: 10px;
-  height: 12px;
-  background: #1a1a2e;
-  border-radius: 50%;
-  top: 22px;
-}
-
-.luntik-eye.left { left: 16px; }
-.luntik-eye.right { right: 16px; }
-
-.luntik-antenna {
-  position: absolute;
-  width: 4px;
-  height: 20px;
-  background: #d88bdb;
-  top: -16px;
-  border-radius: 2px;
-}
-
-.luntik-antenna.left {
-  left: 18px;
-  transform: rotate(-15deg);
-}
-
-.luntik-antenna.right {
-  right: 18px;
-  transform: rotate(15deg);
-}
-
-.egg {
-  width: 80px;
-  height: 30px;
-  background: #e8e0d0;
-  border-radius: 0 0 50% 50%;
-  margin: -5px auto 0;
-  position: relative;
-  z-index: 1;
-}
-
-.egg-crack {
-  position: absolute;
-  top: -6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 12px;
-  background: #e8e0d0;
-  clip-path: polygon(0% 100%, 10% 0%, 20% 80%, 30% 0%, 40% 70%, 50% 0%, 60% 80%, 70% 0%, 80% 70%, 90% 0%, 100% 100%);
 }
 
 .tv-stand {
