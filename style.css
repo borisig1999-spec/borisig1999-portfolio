@@ -201,12 +201,13 @@ body {
 
 .tv-frame {
   max-width: 520px;
-  margin: 0 auto;
+  margin: 30px auto 0;
   background: #3a3a3a;
   border-radius: 20px;
   padding: 14px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.5);
   border: 2px solid #555;
+  position: relative;
 }
 
 .tv-screen {
@@ -299,11 +300,11 @@ body {
 
 .moon {
   position: absolute;
-  bottom: -20px;
+  bottom: -45px;
   left: 50%;
   transform: translateX(-50%);
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   background: #f0e68c;
   border-radius: 50%;
   box-shadow: 0 0 20px rgba(240,230,140,0.4), 0 0 60px rgba(240,230,140,0.15);
@@ -317,23 +318,23 @@ body {
 }
 
 .tv-antenna {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  position: relative;
+  position: absolute;
+  top: -24px;
+  left: 0;
+  right: 0;
   height: 30px;
 }
 
 .antenna-rod {
+  position: absolute;
   width: 3px;
   height: 22px;
   background: #666;
-  position: absolute;
   bottom: 0;
 }
 
-.antenna-rod.left { left: calc(50% - 43px); transform: rotate(-20deg); }
-.antenna-rod.right { left: calc(50% + 40px); transform: rotate(20deg); }
+.antenna-rod.left { left: calc(50% - 43px); transform: rotate(-20deg); transform-origin: bottom center; }
+.antenna-rod.right { left: calc(50% + 40px); transform: rotate(20deg); transform-origin: bottom center; }
 
 .antenna-ball {
   width: 8px;
@@ -350,8 +351,9 @@ body {
 .tv-legs {
   display: flex;
   justify-content: center;
-  gap: 100px;
-  padding-top: 2px;
+  gap: 120px;
+  position: relative;
+  margin-top: -2px;
 }
 
 .tv-leg {
