@@ -194,6 +194,66 @@ body {
   font-size: 1.3rem;
 }
 
+/* Birthday Section */
+.birthday-section {
+  padding: 20px 0 0;
+}
+
+.birthday-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 30px 24px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.birthday-content {
+  text-align: center;
+}
+
+.birthday-label {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.birthday-date {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.countdown {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.countdown .number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.birthday-message {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.party-icon {
+  font-size: 2.5rem;
+  display: inline-block;
+}
+
+.party-icon.left {
+  transform: scaleX(-1);
+}
+
 /* Footer */
 .footer {
   text-align: center;

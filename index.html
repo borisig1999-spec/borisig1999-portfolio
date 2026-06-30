@@ -11,7 +11,7 @@
 <body>
   <header class="header">
     <div class="container">
-      <h1 class="name">Борис</h1>
+      <h1 class="name">Борис Игнатьев</h1>
       <p class="tagline">3D-печать · Книги · Финансы · Хобби</p>
       <nav class="nav">
         <a href="#useful">Чем полезен</a>
@@ -21,6 +21,23 @@
       </nav>
     </div>
   </header>
+
+  <section class="birthday-section">
+    <div class="container">
+      <div class="birthday-block" id="birthday-block">
+        <span class="party-icon left">🎉</span>
+        <div class="birthday-content">
+          <p class="birthday-label">Я родился</p>
+          <p class="birthday-date">25 июля</p>
+          <div id="countdown" class="countdown"></div>
+          <div id="birthday-message" class="birthday-message" style="display:none;">
+            С днём рождения!
+          </div>
+        </div>
+        <span class="party-icon right">🎉</span>
+      </div>
+    </div>
+  </section>
 
   <main>
     <section id="useful" class="section">
@@ -104,5 +121,36 @@
       <p>© 2026 Борис</p>
     </div>
   </footer>
+  <script>
+    (function() {
+      const countdownEl = document.getElementById('countdown');
+      const messageEl = document.getElementById('birthday-message');
+      const now = new Date();
+      const year = now.getFullYear();
+      let birthday = new Date(year, 6, 25);
+
+      if (now > birthday) {
+        birthday = new Date(year + 1, 6, 25);
+      }
+
+      const diff = birthday - now;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+      if (days === 0) {
+        countdownEl.style.display = 'none';
+        messageEl.style.display = 'block';
+      } else {
+        let word;
+        if (days % 10 === 1 && days % 100 !== 11) {
+          word = 'день';
+        } else if ([2, 3, 4].includes(days % 10) && ![12, 13, 14].includes(days % 100)) {
+          word = 'дня';
+        } else {
+          word = 'дней';
+        }
+        countdownEl.innerHTML = 'До дня рождения: <span class="number">' + days + '</span> ' + word;
+      }
+    })();
+  </script>
 </body>
 </html>
