@@ -300,11 +300,11 @@ body {
 
 .moon {
   position: absolute;
-  bottom: -500px;
+  bottom: -530px;
   left: 50%;
   transform: translateX(-50%);
-  width: 600px;
-  height: 600px;
+  width: 700px;
+  height: 700px;
   border-radius: 50%;
   background:
     radial-gradient(circle at 30% 35%, #d0d0d0 0%, transparent 6%),
@@ -330,39 +330,38 @@ body {
 
 .tv-antenna {
   position: absolute;
-  top: -36px;
+  top: -30px;
   left: 0;
   right: 0;
-  height: 40px;
+  height: 34px;
   z-index: 0;
 }
 
 .antenna-rod {
   position: absolute;
   width: 2px;
-  height: 34px;
-  background: #999;
+  height: 30px;
+  background: #aaa;
   bottom: 0;
   transform-origin: bottom center;
 }
 
-.antenna-rod.left { left: calc(50% - 30px); transform: rotate(-25deg); }
-.antenna-rod.right { left: calc(50% + 28px); transform: rotate(25deg); }
+.antenna-rod.left { left: calc(50% - 6px); transform: rotate(-30deg); }
+.antenna-rod.right { left: calc(50% + 4px); transform: rotate(30deg); }
 
 .tv-legs {
   display: flex;
   justify-content: center;
-  gap: 160px;
+  gap: 180px;
   position: relative;
-  height: 20px;
-  margin-top: 0;
+  height: 22px;
 }
 
 .tv-leg {
-  width: 22px;
-  height: 18px;
+  width: 24px;
+  height: 22px;
   background: #5a4a3a;
-  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
 }
 
 /* Footer */
