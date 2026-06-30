@@ -307,7 +307,18 @@ body {
   height: 400px;
   background: #ffffff;
   border-radius: 50%;
-  box-shadow: 0 0 30px rgba(255,255,255,0.25), 0 0 80px rgba(255,255,255,0.1);
+  box-shadow:
+    inset -8px -4px 0 4px #e0e0e0,
+    inset 15px 10px 0 20px #d8d8d8,
+    inset -25px 20px 0 10px #d0d0d0,
+    inset 30px -30px 0 30px #d5d5d5,
+    inset -10px -40px 0 5px #ddd,
+    inset 40px 10px 0 15px #d3d3d3,
+    inset -35px -15px 0 20px #dcdcdc,
+    inset 10px -25px 0 8px #d9d9d9,
+    inset -20px 35px 0 12px #d6d6d6,
+    0 0 30px rgba(255,255,255,0.25),
+    0 0 80px rgba(255,255,255,0.1);
   animation: rotateMoon 60s linear infinite;
   z-index: 1;
 }
