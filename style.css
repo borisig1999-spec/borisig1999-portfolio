@@ -330,7 +330,7 @@ body {
 
 .tv-antenna {
   position: absolute;
-  top: -30px;
+  top: -32px;
   left: 0;
   right: 0;
   height: 36px;
@@ -339,45 +339,43 @@ body {
 .antenna-rod {
   position: absolute;
   width: 2px;
-  height: 30px;
+  height: 32px;
   background: #999;
   bottom: 0;
   transform-origin: bottom center;
 }
 
-.antenna-rod.left { left: calc(50% - 8px); transform: rotate(-30deg); }
-.antenna-rod.right { left: calc(50% + 6px); transform: rotate(30deg); }
-
-.antenna-ball {
-  width: 6px;
-  height: 6px;
-  background: #aaa;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-}
-
-.antenna-ball.left { left: calc(50% - 28px); }
-.antenna-ball.right { left: calc(50% + 22px); }
+.antenna-rod.left { left: calc(50% - 30px); transform: rotate(-25deg); }
+.antenna-rod.right { left: calc(50% + 28px); transform: rotate(25deg); }
 
 .tv-legs {
   display: flex;
   justify-content: center;
-  gap: 160px;
+  gap: 140px;
   position: relative;
-  margin-top: -2px;
+  margin-top: 0;
 }
 
 .tv-leg {
-  width: 10px;
-  height: 22px;
-  background: #555;
-  border-radius: 2px;
-  transform-origin: top center;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 22px solid #555;
+  position: relative;
 }
 
-.tv-leg:first-child { transform: rotate(-12deg); }
-.tv-leg:last-child { transform: rotate(12deg); }
+.tv-leg::after {
+  content: '';
+  position: absolute;
+  top: -22px;
+  left: -6px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 16px solid #3a2a1a;
+}
 
 /* Footer */
 .footer {
