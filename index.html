@@ -24,17 +24,29 @@
 
   <section class="birthday-section">
     <div class="container">
-      <div class="birthday-block" id="birthday-block">
-        <span class="party-icon left">🎉</span>
-        <div class="birthday-content">
-          <p class="birthday-label">Я родился</p>
-          <p class="birthday-date">25 июля</p>
-          <div id="countdown" class="countdown"></div>
-          <div id="birthday-message" class="birthday-message" style="display:none;">
+      <div class="tv-frame">
+        <div class="tv-screen" id="tv-screen">
+          <div class="stars"></div>
+          <p class="tv-label">Я родился</p>
+          <div id="countdown" class="tv-countdown"></div>
+          <div id="birthday-message" class="tv-birthday-msg" style="display:none;">
+            <span class="party-icon left">🎉</span>
             С днём рождения!
+            <span class="party-icon right">🎉</span>
+          </div>
+          <div class="luntik">
+            <div class="luntik-antenna left"></div>
+            <div class="luntik-antenna right"></div>
+            <div class="luntik-head">
+              <div class="luntik-eye left"></div>
+              <div class="luntik-eye right"></div>
+            </div>
+            <div class="egg">
+              <div class="egg-crack"></div>
+            </div>
           </div>
         </div>
-        <span class="party-icon right">🎉</span>
+        <div class="tv-stand"></div>
       </div>
     </div>
   </section>
@@ -126,30 +138,45 @@
       const countdownEl = document.getElementById('countdown');
       const messageEl = document.getElementById('birthday-message');
       const now = new Date();
+      const month = now.getMonth();
+      const day = now.getDate();
       const year = now.getFullYear();
-      let birthday = new Date(year, 6, 25);
 
+      const isBirthday = month === 6 && day === 25;
+
+      if (isBirthday) {
+        countdownEl.style.display = 'none';
+        messageEl.style.display = 'block';
+        return;
+      }
+
+      let birthday = new Date(year, 6, 25);
       if (now > birthday) {
         birthday = new Date(year + 1, 6, 25);
       }
 
       const diff = birthday - now;
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const totalMinutes = Math.floor(diff / (1000 * 60));
+      const days = Math.floor(totalMinutes / (60 * 24));
+      const hours = Math.floor((totalMinutes % (60 * 24)) / 60);
+      const minutes = totalMinutes % 60;
 
-      if (days === 0) {
-        countdownEl.style.display = 'none';
-        messageEl.style.display = 'block';
-      } else {
-        let word;
-        if (days % 10 === 1 && days % 100 !== 11) {
-          word = 'день';
-        } else if ([2, 3, 4].includes(days % 10) && ![12, 13, 14].includes(days % 100)) {
-          word = 'дня';
-        } else {
-          word = 'дней';
-        }
-        countdownEl.innerHTML = 'До дня рождения: <span class="number">' + days + '</span> ' + word;
+      function plural(n, one, few, many) {
+        const mod10 = n % 10;
+        const mod100 = n % 100;
+        if (mod10 === 1 && mod100 !== 11) return one;
+        if ([2,3,4].includes(mod10) && ![12,13,14].includes(mod100)) return few;
+        return many;
       }
+
+      const dWord = plural(days, 'день', 'дня', 'дней');
+      const hWord = plural(hours, 'час', 'часа', 'часов');
+      const mWord = plural(minutes, 'минута', 'минуты', 'минут');
+
+      countdownEl.innerHTML =
+        'Осталось: <span class="number">' + days + '</span> ' + dWord +
+        ' <span class="number">' + hours + '</span> ' + hWord +
+        ' <span class="number">' + minutes + '</span> ' + mWord;
     })();
   </script>
 </body>
