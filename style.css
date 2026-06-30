@@ -299,10 +299,11 @@ body {
 
 .moon {
   position: absolute;
-  top: 20px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
   background: #f0e68c;
   border-radius: 50%;
   box-shadow: 0 0 20px rgba(240,230,140,0.4), 0 0 60px rgba(240,230,140,0.15);
@@ -311,8 +312,8 @@ body {
 }
 
 @keyframes rotateMoon {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% { transform: translateX(-50%) rotate(0deg); }
+  100% { transform: translateX(-50%) rotate(360deg); }
 }
 
 .tv-antenna {
