@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фрагмент книги — Борис Игнатьев</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <style>
+    .book-page {
+      max-width: 650px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    .book-back {
+      display: inline-block;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 30px;
+      transition: color 0.3s;
+    }
+
+    .book-back:hover {
+      color: var(--text);
+    }
+
+    .book-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .book-author {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 40px;
+    }
+
+    .book-text {
+      font-family: 'Merriweather', serif;
+      font-size: 1.1rem;
+      line-height: 1.9;
+      color: #ddd;
+    }
+
+    .book-text p {
+      margin-bottom: 20px;
+      text-indent: 2em;
+    }
+
+    .book-end {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 1px solid var(--card-border);
+    }
+  </style>
+</head>
+<body>
+  <main class="book-page">
+    <a href="index.html" class="book-back">← Назад на сайт</a>
+    <h1 class="book-title">Название книги</h1>
+    <p class="book-author">Борис Игнатьев</p>
+    <div class="book-text">
+      <p>Сюда будет вставлен фрагмент книги. Борис пришлёт текст позже.</p>
+    </div>
+    <p class="book-end">* * *</p>
+    <p class="book-end">Продолжение следует...</p>
+  </main>
+</body>
+</html>
