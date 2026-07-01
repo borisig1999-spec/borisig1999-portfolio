@@ -99,11 +99,8 @@ body {
 
 .cards > :nth-child(1) { grid-column: 1; }
 .cards > :nth-child(2) { grid-column: 2; }
-.cards > :nth-child(3) { grid-column: 1; }
-.cards > :nth-child(4) { grid-column: 2; }
-
-/* Чем полезен (3 карточки): 3я длинная справа */
-#useful .cards > :nth-child(3) { grid-column: 2; }
+.cards > :nth-child(3) { grid-column: 2; }
+.cards > :nth-child(4) { grid-column: 1; }
 
 @media (max-width: 600px) {
   .cards {
