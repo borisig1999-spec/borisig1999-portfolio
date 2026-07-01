@@ -346,14 +346,14 @@ body {
   gap: 180px;
   position: relative;
   height: 24px;
-  margin-top: 10px;
+  margin-top: -2px;
 }
 
 .tv-leg {
   width: 26px;
   height: 24px;
   background: #5a4a3a;
-  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 25% 100%);
 }
 
 /* Footer */
