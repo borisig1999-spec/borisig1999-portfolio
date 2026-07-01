@@ -151,13 +151,14 @@
       const isBirthday = month === 6 && day === 25;
 
       if (isBirthday) {
-        labelEl.style.display = 'none';
-        dateEl.style.display = 'none';
         countdownEl.style.display = 'none';
         messageEl.style.display = 'block';
         startConfetti();
         return;
       }
+
+      labelEl.style.display = 'none';
+      dateEl.style.display = 'none';
 
       let birthday = new Date(year, 6, 25);
       if (now > birthday) {
