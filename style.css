@@ -208,7 +208,7 @@ body {
 .tv-frame {
   background: linear-gradient(180deg, #4a3a2a, #3a2a1a);
   border-radius: 16px;
-  padding: 14px;
+  padding: 0;
   box-shadow: 0 8px 30px rgba(0,0,0,0.5);
   border: 2px solid #5a4a3a;
   position: relative;
@@ -217,7 +217,7 @@ body {
 .tv-screen {
   position: relative;
   background: linear-gradient(180deg, #0a0e2a 0%, #0d1540 40%, #1a1040 70%, #2a1a50 100%);
-  border-radius: 12px;
+  border-radius: 14px;
   min-height: 300px;
   display: flex;
   flex-direction: column;
@@ -225,6 +225,7 @@ body {
   justify-content: center;
   overflow: hidden;
   padding: 40px 20px 40px;
+  margin: 8px;
 }
 
 .stars {
@@ -336,6 +337,7 @@ body {
   position: relative;
   height: 50px;
   z-index: 0;
+  margin-bottom: -8px;
 }
 
 .antenna-rod {
@@ -356,7 +358,7 @@ body {
   gap: 180px;
   position: relative;
   height: 24px;
-  margin-top: 6px;
+  margin-top: 10px;
 }
 
 .tv-leg {
