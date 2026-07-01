@@ -355,12 +355,13 @@ body {
   justify-content: center;
   gap: 180px;
   position: relative;
-  height: 22px;
+  height: 24px;
+  margin-top: 6px;
 }
 
 .tv-leg {
-  width: 24px;
-  height: 22px;
+  width: 26px;
+  height: 24px;
   background: #5a4a3a;
   clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
 }
