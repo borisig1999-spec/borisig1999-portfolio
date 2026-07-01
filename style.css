@@ -305,14 +305,14 @@ body {
 
 .moon {
   position: absolute;
-  bottom: -550px;
+  bottom: -620px;
   left: 50%;
   transform: translateX(-50%);
   width: 700px;
   height: 700px;
   border-radius: 50%;
   object-fit: cover;
-  animation: rotateMoon 180s linear infinite;
+  animation: rotateMoon 300s linear infinite;
   z-index: 1;
 }
 
