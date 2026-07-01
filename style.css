@@ -311,19 +311,7 @@ body {
   width: 700px;
   height: 700px;
   border-radius: 50%;
-  background:
-    radial-gradient(circle at 30% 35%, #d0d0d0 0%, transparent 6%),
-    radial-gradient(circle at 65% 30%, #d8d8d8 0%, transparent 4%),
-    radial-gradient(circle at 50% 55%, #c8c8c8 0%, transparent 10%),
-    radial-gradient(circle at 25% 65%, #ddd 0%, transparent 5%),
-    radial-gradient(circle at 70% 60%, #d0d0d0 0%, transparent 7%),
-    radial-gradient(circle at 40% 80%, #d8d8d8 0%, transparent 3%),
-    radial-gradient(circle at 80% 40%, #ccc 0%, transparent 6%),
-    radial-gradient(circle at 15% 45%, #d5d5d5 0%, transparent 4%),
-    radial-gradient(circle at 55% 25%, #d0d0d0 0%, transparent 5%),
-    radial-gradient(circle at 75% 75%, #d8d8d8 0%, transparent 3%),
-    radial-gradient(circle at 45% 45%, #ffffff 0%, #f8f8f8 100%);
-  box-shadow: 0 0 40px rgba(255,255,255,0.2), 0 0 100px rgba(255,255,255,0.08);
+  object-fit: cover;
   animation: rotateMoon 180s linear infinite;
   z-index: 1;
 }
