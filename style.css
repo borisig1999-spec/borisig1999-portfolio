@@ -102,13 +102,6 @@ body {
 .cards > :nth-child(3) { grid-column: 2; }
 .cards > :nth-child(4) { grid-column: 1; }
 
-/* Хобби: ряд 2 = длинная слева, короткая справа */
-#hobby .cards > :nth-child(3) { grid-column: 1 !important; }
-#hobby .cards > :nth-child(4) { grid-column: 2 !important; }
-
-/* Чем полезен: 3 карточки, ряд 2 = длинная справа */
-#useful .cards > :nth-child(3) { grid-column: 2 !important; }
-
 @media (max-width: 600px) {
   .cards {
     grid-template-columns: 1fr;
