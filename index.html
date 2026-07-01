@@ -33,12 +33,16 @@
           <div class="tv-screen" id="tv-screen">
             <div class="stars"></div>
             <img src="moon.png" class="moon" alt="луна">
-            <p class="tv-label">Я родился</p>
+            <p class="tv-label" id="tv-label">Я родился</p>
+            <p class="tv-date" id="tv-date">25 июля</p>
             <div id="countdown" class="tv-countdown"></div>
             <div id="birthday-message" class="tv-birthday-msg" style="display:none;">
-              <span class="party-icon left">🎉</span>
-              С днём рождения!
-              <span class="party-icon right">🎉</span>
+              <div class="poppers">
+                <span class="popper left">🎉</span>
+                <span class="popper right">🎉</span>
+              </div>
+              <p class="birthday-title">С днём рождения!</p>
+              <div class="confetti-container" id="confetti"></div>
             </div>
           </div>
         </div>
@@ -136,6 +140,9 @@
     (function() {
       const countdownEl = document.getElementById('countdown');
       const messageEl = document.getElementById('birthday-message');
+      const labelEl = document.getElementById('tv-label');
+      const dateEl = document.getElementById('tv-date');
+      const confettiEl = document.getElementById('confetti');
       const now = new Date();
       const month = now.getMonth();
       const day = now.getDate();
@@ -144,8 +151,11 @@
       const isBirthday = month === 6 && day === 25;
 
       if (isBirthday) {
+        labelEl.style.display = 'none';
+        dateEl.style.display = 'none';
         countdownEl.style.display = 'none';
         messageEl.style.display = 'block';
+        startConfetti();
         return;
       }
 
@@ -176,6 +186,47 @@
         'Осталось: <span class="number">' + days + '</span> ' + dWord +
         ' <span class="number">' + hours + '</span> ' + hWord +
         ' <span class="number">' + minutes + '</span> ' + mWord;
+
+      function startConfetti() {
+        var colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff', '#ffd700', '#ff6347'];
+        for (var i = 0; i < 60; i++) {
+          (function(index) {
+            setTimeout(function() {
+              var piece = document.createElement('div');
+              piece.className = 'confetti-piece';
+              piece.style.left = Math.random() * 100 + '%';
+              piece.style.top = '-10px';
+              piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+              piece.style.animationDuration = (1.5 + Math.random() * 2) + 's';
+              piece.style.animationDelay = '0s';
+              piece.style.width = (5 + Math.random() * 8) + 'px';
+              piece.style.height = (5 + Math.random() * 8) + 'px';
+              if (Math.random() > 0.5) piece.style.borderRadius = '50%';
+              confettiEl.appendChild(piece);
+              setTimeout(function() { piece.remove(); }, 4000);
+            }, index * 50);
+          })(i);
+        }
+        setInterval(function() {
+          for (var i = 0; i < 30; i++) {
+            (function(index) {
+              setTimeout(function() {
+                var piece = document.createElement('div');
+                piece.className = 'confetti-piece';
+                piece.style.left = Math.random() * 100 + '%';
+                piece.style.top = '-10px';
+                piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+                piece.style.animationDuration = (1.5 + Math.random() * 2) + 's';
+                piece.style.width = (5 + Math.random() * 8) + 'px';
+                piece.style.height = (5 + Math.random() * 8) + 'px';
+                if (Math.random() > 0.5) piece.style.borderRadius = '50%';
+                confettiEl.appendChild(piece);
+                setTimeout(function() { piece.remove(); }, 4000);
+              }, index * 60);
+            })(i);
+          }
+        }, 3000);
+      }
     })();
   </script>
 </body>
